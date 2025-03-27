@@ -2,6 +2,17 @@
 // Nama : Ibnu Hanafi Assalam
 // NIM   : A12.2023.06994
 session_start();
+
+// Cek apakah session sudah dimulai, jika belum maka mulai session.
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Buat CSRF token jika tidak ada
+if (!isset($_SESSION['token'])) {
+    $_SESSION['token'] = bin2hex(random_bytes(32));
+}
+
 require_once 'config.php';
 
 $error_message = '';
@@ -58,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registrasi Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
