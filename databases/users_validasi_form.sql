@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2025 at 10:02 AM
+-- Generation Time: Mar 28, 2025 at 08:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `passw`, `created_at`) VALUES
-(1, 'Ibnu Hanafi Assalam', '112202306994@mhs.dinus.ac.id', '$2y$10$npotXmH3OcPG7NAJfO7weuDvTfLRHWz1JlCNCJCQ/luzPm4XhgIvK', '2025-03-24 08:09:04');
+(1, 'Ibnu Hanafi Assalam', '112202306994@mhs.dinus.ac.id', '$2y$10$heLVvx2GyPh7qES6QpRsoeRG7Rs2DsWp90pHAUiqEjx/oOZ3t0lS6', '2025-03-28 07:11:06');
 
 --
 -- Indexes for dumped tables
@@ -50,8 +50,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `passw`, `created_at`) VALUES
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
